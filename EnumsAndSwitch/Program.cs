@@ -37,11 +37,27 @@ namespace EnumsAndSwitch
         {
             foreach (var todo in todos)
             {
+                switch (todo.Status)
+                {
+                    case Status.NotStarted:
+                        break;
+                    case Status.InProgress:
+                        break;
+                    case Status.OnHold:
+                        break;
+                    case Status.Completed:
+                        break;
+                    case Status.Deleted:
+                        break;
+                    default:
+                        break;
+                }
+                Console.WriteLine(todo.Description);
 
             }
         }
     }
-
+                                
     class Todo
     {
         public string Description { get; set; }
@@ -57,4 +73,4 @@ namespace EnumsAndSwitch
         Completed,
         Deleted
     }
-}
+}   
